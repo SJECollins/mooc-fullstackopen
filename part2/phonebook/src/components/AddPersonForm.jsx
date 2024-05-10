@@ -65,6 +65,12 @@ const AddPersonForm = ({ persons, setPersons, setResults, setMessage }) => {
         setMessage({
           text: `${response.name} has been added to the phonebook`,
           type: "success",
+        }).catch((error) => {
+          console.log(error);
+          setMessage({
+            text: error.response.data.error,
+            type: "error",
+          });
         });
         setTimeout(() => {
           setMessage(null);

@@ -22,6 +22,10 @@ const Persons = ({ results, setPersons, setResults, setMessage }) => {
           })
           .catch((error) => {
             console.log(error);
+            setMessage({
+              text: `Information of ${person.name} has already been removed from the server`,
+              type: "error",
+            });
           });
       });
     }
