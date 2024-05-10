@@ -2,6 +2,6 @@ POST http://localhost:3001/api/persons
 content-type: application/json
 
 {
-    "name": "Testing Tester",
-    "number": "01-23-4567890"
+    "name": "Test Regex",
+    "number": "0123-4567890"
 }
